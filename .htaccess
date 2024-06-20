@@ -1,0 +1,20 @@
+RewriteEngine On
+
+RewriteRule "trang-chu" "index.php"
+
+RewriteRule "^([a-zA-Z0-9]+).html$" "index.php?page=$1"
+
+RewriteRule "danh-muc-image" "categoryImg.html"
+RewriteRule "image" "anh.html"
+RewriteRule "video" "video.html"
+RewriteRule "upload" "upload.html"
+
+
+RewriteRule "^image/([a-z]+)/([0-9]+).html$" "index.php?page=anh&method=$1&nav=$2"
+
+RewriteRule "image/cha-ca-odeng/([0-9]+)" "anh/odeng/$1.html"
+RewriteRule "image/cuon-kimbap/([0-9]+)" "anh/kimbap/$1.html"
+
+
+RewriteRule "^image/([0-9]+)/([a-zA-Z0-9-]+)" "index.php?page=image&id=$1&name=$2"
+RewriteRule "^anh/([0-9]+)/([a-zA-Z0-9-]+)" "index.php?page=anh&id=$1&name=$2"
